@@ -1,0 +1,14 @@
+{
+  "extends": "@postgres-backup-dashboard/config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2020", "DOM"],
+    "types": ["react", "react-dom"]
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../types" }
+  ]
+}

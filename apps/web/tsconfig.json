@@ -1,0 +1,23 @@
+{
+  "extends": "@postgres-backup-dashboard/config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "paths": {
+      "@postgres-backup-dashboard/types": ["../../packages/types/src"],
+      "@postgres-backup-dashboard/ui": ["../../packages/ui/src"]
+    }
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../../packages/types" },
+    { "path": "../../packages/ui" }
+  ]
+}

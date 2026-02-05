@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Base button styles - 0px radius */
+  .btn {
+    @apply px-4 py-2 font-medium transition-colors border-1;
+    @apply border border-border;
+  }
+  
+  .btn-primary {
+    @apply bg-bg-secondary text-accent border-accent;
+    @apply hover:bg-bg-hover;
+  }
+  
+  .btn-secondary {
+    @apply bg-bg-secondary text-text-primary;
+    @apply hover:bg-bg-hover;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-text-secondary;
+    @apply hover:bg-bg-tertiary hover:text-text-primary;
+  }
+  
+  .btn-danger {
+    @apply bg-status-error/10 text-status-error border-status-error/20;
+    @apply hover:bg-status-error/20;
+  }
+  
+  /* Base input styles - 0px radius */
+  .input {
+    @apply w-full px-4 py-2 bg-bg-secondary border-1 border-border;
+    @apply text-text-primary placeholder-text-muted;
+    @apply focus:outline-none focus:border-accent;
+  }
+  
+  /* Base card styles - 0px radius */
+  .card {
+    @apply bg-bg-secondary border-1 border-border;
+  }
+  
+  /* Base table styles */
+  .table {
+    @apply w-full border-collapse;
+  }
+  
+  .table-th {
+    @apply px-4 py-3 text-left text-text-secondary font-medium text-sm;
+    @apply border-b-1 border-border;
+  }
+  
+  .table-td {
+    @apply px-4 py-3 text-text-primary text-sm;
+    @apply border-b-1 border-border;
+  }
+  
+  .table-tr {
+    @apply hover:bg-bg-tertiary;
+  }
+  
+  /* Status badges - 0px radius */
+  .badge {
+    @apply inline-flex items-center px-2 py-1 text-xs font-medium;
+    @apply border-1;
+  }
+  
+  .badge-success {
+    @apply bg-status-success/10 text-status-success border-status-success/20;
+  }
+  
+  .badge-error {
+    @apply bg-status-error/10 text-status-error border-status-error/20;
+  }
+  
+  .badge-warning {
+    @apply bg-status-warning/10 text-status-warning border-status-warning/20;
+  }
+  
+  .badge-neutral {
+    @apply bg-bg-tertiary text-text-secondary border-border;
+  }
+  
+  .badge-accent {
+    @apply bg-accent/10 text-accent border-accent/20;
+  }
+}

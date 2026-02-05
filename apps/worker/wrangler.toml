@@ -1,0 +1,28 @@
+name = "postgres-backup-dashboard-worker"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Environment variables (set these in production with wrangler secret)
+# wrangler secret put BETTER_AUTH_SECRET
+# wrangler secret put DATABASE_ENCRYPTION_KEY
+# wrangler secret put SMTP_PASSWORD
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+# KV Namespaces (create with: wrangler kv:namespace create "BACKUP_LOGS")
+[[kv_namespaces]]
+binding = "BACKUP_LOGS"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+# R2 Buckets (create with: wrangler r2 bucket create "postgres-backups")
+[[r2_buckets]]
+binding = "BACKUP_BUCKET"
+bucket_name = "postgres-backups"

@@ -1,0 +1,13 @@
+{
+  "extends": "@postgres-backup-dashboard/config/tsconfig.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "types": ["@cloudflare/workers-types"]
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../../packages/types" }
+  ]
+}
